@@ -1,0 +1,10 @@
+D:\Công việc\Angular web\Backend\WebAngular\Web.ViewModel\bin\Debug\netcoreapp3.1\Web.ViewModel.deps.json
+D:\Công việc\Angular web\Backend\WebAngular\Web.ViewModel\bin\Debug\netcoreapp3.1\Web.ViewModel.dll
+D:\Công việc\Angular web\Backend\WebAngular\Web.ViewModel\bin\Debug\netcoreapp3.1\Web.ViewModel.pdb
+D:\Công việc\Angular web\Backend\WebAngular\Web.ViewModel\obj\Debug\netcoreapp3.1\Web.ViewModel.csproj.AssemblyReference.cache
+D:\Công việc\Angular web\Backend\WebAngular\Web.ViewModel\obj\Debug\netcoreapp3.1\Web.ViewModel.GeneratedMSBuildEditorConfig.editorconfig
+D:\Công việc\Angular web\Backend\WebAngular\Web.ViewModel\obj\Debug\netcoreapp3.1\Web.ViewModel.AssemblyInfoInputs.cache
+D:\Công việc\Angular web\Backend\WebAngular\Web.ViewModel\obj\Debug\netcoreapp3.1\Web.ViewModel.AssemblyInfo.cs
+D:\Công việc\Angular web\Backend\WebAngular\Web.ViewModel\obj\Debug\netcoreapp3.1\Web.ViewModel.csproj.CoreCompileInputs.cache
+D:\Công việc\Angular web\Backend\WebAngular\Web.ViewModel\obj\Debug\netcoreapp3.1\Web.ViewModel.dll
+D:\Công việc\Angular web\Backend\WebAngular\Web.ViewModel\obj\Debug\netcoreapp3.1\Web.ViewModel.pdb

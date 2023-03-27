@@ -1,0 +1,13 @@
+D:\Công việc\Angular web\Backend\WebAngular\Web.Data\bin\Debug\netcoreapp3.1\Web.Data.deps.json
+D:\Công việc\Angular web\Backend\WebAngular\Web.Data\bin\Debug\netcoreapp3.1\Web.Data.runtimeconfig.json
+D:\Công việc\Angular web\Backend\WebAngular\Web.Data\bin\Debug\netcoreapp3.1\Web.Data.runtimeconfig.dev.json
+D:\Công việc\Angular web\Backend\WebAngular\Web.Data\bin\Debug\netcoreapp3.1\Web.Data.dll
+D:\Công việc\Angular web\Backend\WebAngular\Web.Data\bin\Debug\netcoreapp3.1\Web.Data.pdb
+D:\Công việc\Angular web\Backend\WebAngular\Web.Data\obj\Debug\netcoreapp3.1\Web.Data.csproj.AssemblyReference.cache
+D:\Công việc\Angular web\Backend\WebAngular\Web.Data\obj\Debug\netcoreapp3.1\Web.Data.GeneratedMSBuildEditorConfig.editorconfig
+D:\Công việc\Angular web\Backend\WebAngular\Web.Data\obj\Debug\netcoreapp3.1\Web.Data.AssemblyInfoInputs.cache
+D:\Công việc\Angular web\Backend\WebAngular\Web.Data\obj\Debug\netcoreapp3.1\Web.Data.AssemblyInfo.cs
+D:\Công việc\Angular web\Backend\WebAngular\Web.Data\obj\Debug\netcoreapp3.1\Web.Data.csproj.CoreCompileInputs.cache
+D:\Công việc\Angular web\Backend\WebAngular\Web.Data\obj\Debug\netcoreapp3.1\Web.Data.dll
+D:\Công việc\Angular web\Backend\WebAngular\Web.Data\obj\Debug\netcoreapp3.1\Web.Data.pdb
+D:\Công việc\Angular web\Backend\WebAngular\Web.Data\obj\Debug\netcoreapp3.1\Web.Data.genruntimeconfig.cache
