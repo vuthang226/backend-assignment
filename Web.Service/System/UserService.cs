@@ -112,10 +112,19 @@ namespace Web.Service.System
                 expires: DateTime.Now.AddHours(3),
                 signingCredentials: creds);
             var jwtToken = new JwtSecurityTokenHandler().WriteToken(token);
+            var userVm = new UserVm()
+            {
+                UserName = user.UserName,
+                Id = user.Id,
+                Email = user.Email,
+                PhoneNumber = user.PhoneNumber,
+                isAdmin = roles.Contains("admin")
+            };
             serviceResult.OnSuccess(new
             {
                 jwtToken,
-                user
+                userVm
+                
             }, Resource.LoginSuccess);
             return serviceResult;
         }

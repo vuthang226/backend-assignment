@@ -83,3 +83,4 @@ D:\Công việc\Angular web\Backend\WebAngular\WebApplication1\bin\Debug\netcore
 D:\Công việc\Angular web\Backend\WebAngular\WebApplication1\bin\Debug\netcoreapp3.1\Web.Data.pdb
 D:\Công việc\Angular web\Backend\WebAngular\WebApplication1\bin\Debug\netcoreapp3.1\Web.ViewModel.pdb
 D:\Công việc\Angular web\Backend\WebAngular\WebApplication1\obj\Debug\netcoreapp3.1\WebApplication1.MvcApplicationPartsAssemblyInfo.cs
+D:\Công việc\Angular web\Backend\WebAngular\WebApplication1\obj\Debug\netcoreapp3.1\WebApplication1.csproj.CopyComplete
