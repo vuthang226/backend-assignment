@@ -1,6 +1,7 @@
-using Microsoft.AspNetCore.Authentication.JwtBearer;
+﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -14,6 +15,7 @@ using Microsoft.OpenApi.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Threading.Tasks;
 using Web.Data.EF;
 using Web.Data.Entities.System;
@@ -92,6 +94,7 @@ namespace WebApplication1
             })
             .AddJwtBearer(options =>
             {
+                
                 options.RequireHttpsMetadata = false;
                 options.SaveToken = true;
                 options.TokenValidationParameters = new TokenValidationParameters()
@@ -111,6 +114,8 @@ namespace WebApplication1
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+
+            app.UseCors(o => o.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -122,11 +127,25 @@ namespace WebApplication1
 
             app.UseRouting();
 
+            app.Use(async (context, next) =>
+            {
+                await next();
+
+                if (context.Response.StatusCode == (int)HttpStatusCode.Unauthorized )
+                {
+                    await context.Response.WriteAsync("Bạn chưa đăng nhập");
+                }
+                if ( context.Response.StatusCode == (int)HttpStatusCode.Forbidden)
+                {
+                    await context.Response.WriteAsync("Bạn không có quyền truy cập tính năng này");
+                }
+            });
+
             app.UseAuthentication();
 
             app.UseAuthorization();
 
-            app.UseCors(o => o.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod().WithExposedHeaders("Content-Disposition"));
+            
 
             
 

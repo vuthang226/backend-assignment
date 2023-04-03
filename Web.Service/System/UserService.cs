@@ -69,6 +69,7 @@ namespace Web.Service.System
                 serviceResult.OnError(0, Resource.UserInsertError);
                 return serviceResult;
             }
+            await _userManager.AddToRoleAsync(user, "reader");
             serviceResult.OnSuccess(1,Resource.UserInsertSuccess);
             return serviceResult;
 
@@ -118,7 +119,7 @@ namespace Web.Service.System
                 Id = user.Id,
                 Email = user.Email,
                 PhoneNumber = user.PhoneNumber,
-                isAdmin = roles.Contains("admin")
+                Role = roles[0]
             };
             serviceResult.OnSuccess(new
             {
@@ -176,7 +177,7 @@ namespace Web.Service.System
                 Email = user.Email,
                 PhoneNumber = user.PhoneNumber,
                 UserName = user.UserName,
-                isAdmin = true
+                Role = ""
             });
             return serviceResult;
         }
@@ -242,7 +243,7 @@ namespace Web.Service.System
                 .Take(request.PageSize)
                 .Select(x => new UserVm()
                 {
-                    isAdmin = x.role.Name == "admin"?true:false,
+                    Role = x.role.Name,
                     Email = x.u.Email,
                     PhoneNumber = x.u.PhoneNumber,
                     UserName = x.u.UserName,
@@ -265,19 +266,29 @@ namespace Web.Service.System
         /// </summary>
         /// <param name="userId">id tài khoản</param>
         /// <returns></returns>
-        public async Task<ServiceResult> AssignAdmin(Guid userId)
+        public async Task<ServiceResult> AssignRole(UserAssign request,Guid currentId)
         {
+            
             ServiceResult serviceResult = new ServiceResult();
-            var user = await _userManager.FindByIdAsync(userId.ToString());
-            var roleShop = "admin";
+            if (currentId == request.UserId)
+            {
+                serviceResult.OnError(0, Resource.UserNotAssignItSelf);
+                return serviceResult;
+            }
+            var user = await _userManager.FindByIdAsync(request.UserId.ToString());
+            
             if (user == null)
             {
                 serviceResult.OnError(0, Resource.UserNameNotFound);
                 return serviceResult;
             }
-            if (await _userManager.IsInRoleAsync(user, roleShop) == false)
+            if (await _userManager.IsInRoleAsync(user, request.RoleName) == false)
             {
-                await _userManager.AddToRoleAsync(user, roleShop);
+                //await _userManager.RemoveFromRolesAsync(user, new[] { "admin", "reader", "writer" });
+                await _userManager.RemoveFromRoleAsync(user, "admin");
+                await _userManager.RemoveFromRoleAsync(user,  "reader");
+                await _userManager.RemoveFromRoleAsync(user, "writer");
+                await _userManager.AddToRoleAsync(user, request.RoleName);
             }
             //await _userManager.UpdateAsync(user);
             serviceResult.OnSuccess(1, Resource.AssignAdmin);

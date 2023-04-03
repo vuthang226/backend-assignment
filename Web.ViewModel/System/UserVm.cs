@@ -16,6 +16,6 @@ namespace Web.ViewModel.System
 
         public string UserName { get; set; }
 
-        public bool isAdmin { get; set; }
+        public string Role { get; set; }
     }
 }

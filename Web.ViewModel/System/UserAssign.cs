@@ -6,6 +6,7 @@ namespace Web.ViewModel.System
 {
     public class UserAssign
     {
-        public Guid Id { get; set; }
+        public Guid UserId { get; set; }
+        public string RoleName { get; set; }
     }
 }

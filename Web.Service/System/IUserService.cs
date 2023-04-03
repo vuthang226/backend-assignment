@@ -21,7 +21,7 @@ namespace Web.Service.System
 
         Task<PagedResult<UserVm>> GetUsersPaging(GetUserPagingRequest request);
 
-        Task<ServiceResult> AssignAdmin(Guid userId);
+        Task<ServiceResult> AssignRole(UserAssign request,Guid cur);
 
     }
 }

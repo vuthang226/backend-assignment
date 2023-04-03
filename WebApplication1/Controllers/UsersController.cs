@@ -41,7 +41,7 @@ namespace WebApplication1.Controllers
         }
 
         [HttpGet("{id}")]
-        [Authorize]
+        [Authorize(Roles = "admin,reader,writer")]
         public async Task<ServiceResult> GetUserById(Guid id)
         {
             ServiceResult serviceResult = new ServiceResult();
@@ -58,7 +58,7 @@ namespace WebApplication1.Controllers
         }
 
         [HttpGet("page")]
-        [Authorize]
+        [Authorize(Roles = "admin,reader,writer")]
         public async Task<PagedResult<UserVm>> GetUsersPaging([FromQuery] GetUserPagingRequest request)
         {
             try
@@ -109,12 +109,13 @@ namespace WebApplication1.Controllers
 
         [HttpPost("assign")]
         [Authorize(Roles = "admin")]
-        public async Task<ServiceResult> AssignAdmin([FromBody] UserAssign id)
+        public async Task<ServiceResult> AssignRole([FromBody] UserAssign request)
         {
             ServiceResult serviceResult = new ServiceResult();
+            Guid cur = _workContext.GetUserId();
             try
             {
-                serviceResult = await _userService.AssignAdmin(id.Id);
+                serviceResult = await _userService.AssignRole(request,cur);
             }
             catch (Exception e)
             {
@@ -125,7 +126,7 @@ namespace WebApplication1.Controllers
         }
 
         [HttpPut("{id}")]
-        [Authorize(Roles = "admin")]
+        [Authorize(Roles = "admin,writer")]
         public async Task<ServiceResult> Update(Guid id, [FromBody] UserVm request)
         {
             ServiceResult serviceResult = new ServiceResult();
@@ -140,6 +141,8 @@ namespace WebApplication1.Controllers
             }
             return serviceResult;
         }
+
+        
 
 
 

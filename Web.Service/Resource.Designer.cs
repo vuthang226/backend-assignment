@@ -178,6 +178,15 @@ namespace Web.Service {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Không thể thay đổi quyền của bản thân.
+        /// </summary>
+        internal static string UserNotAssignItSelf {
+            get {
+                return ResourceManager.GetString("UserNotAssignItSelf", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Tài khoản không tồn tại.
         /// </summary>
         internal static string UserNotFound {
