@@ -117,55 +117,58 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="AssignAdmin" xml:space="preserve">
-    <value>Gán quyền thành công</value>
+  <data name="ConfirmPasswordNotCorrect" xml:space="preserve">
+    <value>Confirm Password Not Correct</value>
+  </data>
+  <data name="ErrorServer" xml:space="preserve">
+    <value>Error </value>
   </data>
   <data name="LoginError" xml:space="preserve">
-    <value>Tài khoản hoặc mật khẩu không chính xác</value>
+    <value>Login Error</value>
   </data>
   <data name="LoginSuccess" xml:space="preserve">
-    <value>Đăng nhập thành công</value>
+    <value>Login Success</value>
   </data>
   <data name="RoleExist" xml:space="preserve">
-    <value>Role đã tồn tại</value>
+    <value>Role exist</value>
   </data>
   <data name="RoleInsertError" xml:space="preserve">
-    <value>Thêm mới Role không thành công</value>
+    <value>Insert role error</value>
   </data>
   <data name="RoleInsertSuccess" xml:space="preserve">
-    <value>Thêm mới Role thành công</value>
+    <value>Insert role success</value>
   </data>
   <data name="UserDeleteError" xml:space="preserve">
-    <value>Xóa tài khoản không thành công</value>
+    <value>Delete user error</value>
   </data>
   <data name="UserDeleteSuccess" xml:space="preserve">
-    <value>Xóa tài khoản thành công</value>
+    <value>Delete user success</value>
   </data>
   <data name="UserInsertError" xml:space="preserve">
-    <value>Tạo tài khoản không thành công</value>
+    <value>Insert user error</value>
   </data>
   <data name="UserInsertSuccess" xml:space="preserve">
-    <value>Tạo tài khoản thành công</value>
+    <value>Insert user success</value>
   </data>
   <data name="UserMailExist" xml:space="preserve">
-    <value>Tài khoản mail đã tồn tại</value>
+    <value>Mail exist</value>
   </data>
   <data name="UserNameExist" xml:space="preserve">
-    <value>Tên đăng nhập đã tồn tại</value>
+    <value>User name exist</value>
   </data>
   <data name="UserNameNotFound" xml:space="preserve">
-    <value>Tên đăng nhập không đúng</value>
+    <value>User name not found</value>
   </data>
   <data name="UserNotAssignItSelf" xml:space="preserve">
-    <value>Không thể thay đổi quyền của bản thân</value>
+    <value>User not assign rule itself</value>
   </data>
   <data name="UserNotFound" xml:space="preserve">
-    <value>Tài khoản không tồn tại</value>
+    <value>User not exist</value>
   </data>
   <data name="UserUpdateError" xml:space="preserve">
-    <value>Cập nhật tài khoản không thành công</value>
+    <value>Update user error</value>
   </data>
   <data name="UserUpdateSuccess" xml:space="preserve">
-    <value>Cập nhật tài khoản thành công</value>
+    <value>Update user success</value>
   </data>
 </root>

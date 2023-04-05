@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Web.Service {
+namespace Web.Service.Resource {
     using System;
     
     
@@ -22,7 +22,7 @@ namespace Web.Service {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resource {
+    public class Resource {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,10 +36,10 @@ namespace Web.Service {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Web.Service.Resource", typeof(Resource).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Web.Service.Resource.Resource", typeof(Resource).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -51,7 +51,7 @@ namespace Web.Service {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,16 +63,34 @@ namespace Web.Service {
         /// <summary>
         ///   Looks up a localized string similar to Gán quyền thành công.
         /// </summary>
-        internal static string AssignAdmin {
+        public static string AssignAdmin {
             get {
                 return ResourceManager.GetString("AssignAdmin", resourceCulture);
             }
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Xác nhận mật khẩu không trùng khớp.
+        /// </summary>
+        public static string ConfirmPasswordNotCorrect {
+            get {
+                return ResourceManager.GetString("ConfirmPasswordNotCorrect", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Có lỗi xảy ra.
+        /// </summary>
+        public static string ErrorServer {
+            get {
+                return ResourceManager.GetString("ErrorServer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Tài khoản hoặc mật khẩu không chính xác.
         /// </summary>
-        internal static string LoginError {
+        public static string LoginError {
             get {
                 return ResourceManager.GetString("LoginError", resourceCulture);
             }
@@ -81,7 +99,7 @@ namespace Web.Service {
         /// <summary>
         ///   Looks up a localized string similar to Đăng nhập thành công.
         /// </summary>
-        internal static string LoginSuccess {
+        public static string LoginSuccess {
             get {
                 return ResourceManager.GetString("LoginSuccess", resourceCulture);
             }
@@ -90,7 +108,7 @@ namespace Web.Service {
         /// <summary>
         ///   Looks up a localized string similar to Role đã tồn tại.
         /// </summary>
-        internal static string RoleExist {
+        public static string RoleExist {
             get {
                 return ResourceManager.GetString("RoleExist", resourceCulture);
             }
@@ -99,7 +117,7 @@ namespace Web.Service {
         /// <summary>
         ///   Looks up a localized string similar to Thêm mới Role không thành công.
         /// </summary>
-        internal static string RoleInsertError {
+        public static string RoleInsertError {
             get {
                 return ResourceManager.GetString("RoleInsertError", resourceCulture);
             }
@@ -108,7 +126,7 @@ namespace Web.Service {
         /// <summary>
         ///   Looks up a localized string similar to Thêm mới Role thành công.
         /// </summary>
-        internal static string RoleInsertSuccess {
+        public static string RoleInsertSuccess {
             get {
                 return ResourceManager.GetString("RoleInsertSuccess", resourceCulture);
             }
@@ -117,7 +135,7 @@ namespace Web.Service {
         /// <summary>
         ///   Looks up a localized string similar to Xóa tài khoản không thành công.
         /// </summary>
-        internal static string UserDeleteError {
+        public static string UserDeleteError {
             get {
                 return ResourceManager.GetString("UserDeleteError", resourceCulture);
             }
@@ -126,7 +144,7 @@ namespace Web.Service {
         /// <summary>
         ///   Looks up a localized string similar to Xóa tài khoản thành công.
         /// </summary>
-        internal static string UserDeleteSuccess {
+        public static string UserDeleteSuccess {
             get {
                 return ResourceManager.GetString("UserDeleteSuccess", resourceCulture);
             }
@@ -135,7 +153,7 @@ namespace Web.Service {
         /// <summary>
         ///   Looks up a localized string similar to Tạo tài khoản không thành công.
         /// </summary>
-        internal static string UserInsertError {
+        public static string UserInsertError {
             get {
                 return ResourceManager.GetString("UserInsertError", resourceCulture);
             }
@@ -144,7 +162,7 @@ namespace Web.Service {
         /// <summary>
         ///   Looks up a localized string similar to Tạo tài khoản thành công.
         /// </summary>
-        internal static string UserInsertSuccess {
+        public static string UserInsertSuccess {
             get {
                 return ResourceManager.GetString("UserInsertSuccess", resourceCulture);
             }
@@ -153,7 +171,7 @@ namespace Web.Service {
         /// <summary>
         ///   Looks up a localized string similar to Tài khoản mail đã tồn tại.
         /// </summary>
-        internal static string UserMailExist {
+        public static string UserMailExist {
             get {
                 return ResourceManager.GetString("UserMailExist", resourceCulture);
             }
@@ -162,7 +180,7 @@ namespace Web.Service {
         /// <summary>
         ///   Looks up a localized string similar to Tên đăng nhập đã tồn tại.
         /// </summary>
-        internal static string UserNameExist {
+        public static string UserNameExist {
             get {
                 return ResourceManager.GetString("UserNameExist", resourceCulture);
             }
@@ -171,7 +189,7 @@ namespace Web.Service {
         /// <summary>
         ///   Looks up a localized string similar to Tên đăng nhập không đúng.
         /// </summary>
-        internal static string UserNameNotFound {
+        public static string UserNameNotFound {
             get {
                 return ResourceManager.GetString("UserNameNotFound", resourceCulture);
             }
@@ -180,7 +198,7 @@ namespace Web.Service {
         /// <summary>
         ///   Looks up a localized string similar to Không thể thay đổi quyền của bản thân.
         /// </summary>
-        internal static string UserNotAssignItSelf {
+        public static string UserNotAssignItSelf {
             get {
                 return ResourceManager.GetString("UserNotAssignItSelf", resourceCulture);
             }
@@ -189,7 +207,7 @@ namespace Web.Service {
         /// <summary>
         ///   Looks up a localized string similar to Tài khoản không tồn tại.
         /// </summary>
-        internal static string UserNotFound {
+        public static string UserNotFound {
             get {
                 return ResourceManager.GetString("UserNotFound", resourceCulture);
             }
@@ -198,7 +216,7 @@ namespace Web.Service {
         /// <summary>
         ///   Looks up a localized string similar to Cập nhật tài khoản không thành công.
         /// </summary>
-        internal static string UserUpdateError {
+        public static string UserUpdateError {
             get {
                 return ResourceManager.GetString("UserUpdateError", resourceCulture);
             }
@@ -207,7 +225,7 @@ namespace Web.Service {
         /// <summary>
         ///   Looks up a localized string similar to Cập nhật tài khoản thành công.
         /// </summary>
-        internal static string UserUpdateSuccess {
+        public static string UserUpdateSuccess {
             get {
                 return ResourceManager.GetString("UserUpdateSuccess", resourceCulture);
             }

@@ -1782,6 +1782,11 @@
         "runtime": {
           "Web.Service.dll": {}
         },
+        "resources": {
+          "en/Web.Service.resources.dll": {
+            "locale": "en"
+          }
+        },
         "compile": {
           "Web.Service.dll": {}
         }

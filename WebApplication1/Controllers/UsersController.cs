@@ -5,13 +5,14 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Web.Service.Resource;
 using Web.Service.System;
 using Web.ViewModel.Common;
 using Web.ViewModel.System;
 
 namespace WebApplication1.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("{culture:culture}/api/[controller]")]
     [ApiController]
     public class UsersController : ControllerBase
     {
@@ -35,7 +36,7 @@ namespace WebApplication1.Controllers
             }
             catch (Exception e)
             {
-                serviceResult.HandleException(e, "Có lỗi xảy ra");
+                serviceResult.HandleException(e, Resource.ErrorServer);
             }
             return serviceResult;
         }
@@ -52,7 +53,7 @@ namespace WebApplication1.Controllers
             }
             catch (Exception e)
             {
-                serviceResult.HandleException(e, "Có lỗi xảy ra");
+                serviceResult.HandleException(e, Resource.ErrorServer);
             }
             return serviceResult;
         }
@@ -85,7 +86,7 @@ namespace WebApplication1.Controllers
             }
             catch (Exception e)
             {
-                serviceResult.HandleException(e, "Có lỗi xảy ra");
+                serviceResult.HandleException(e, Resource.ErrorServer);
             }
             return serviceResult;
         }
@@ -101,7 +102,7 @@ namespace WebApplication1.Controllers
             }
             catch (Exception e)
             {
-                serviceResult.HandleException(e, "Có lỗi xảy ra");
+                serviceResult.HandleException(e, Resource.ErrorServer);
             }
 
             return serviceResult;
@@ -119,7 +120,7 @@ namespace WebApplication1.Controllers
             }
             catch (Exception e)
             {
-                serviceResult.HandleException(e, "Có lỗi xảy ra");
+                serviceResult.HandleException(e, Resource.ErrorServer);
             }
 
             return serviceResult;
@@ -137,7 +138,7 @@ namespace WebApplication1.Controllers
             }
             catch (Exception e)
             {
-                serviceResult.HandleException(e, "Có lỗi xảy ra");
+                serviceResult.HandleException(e, Resource.ErrorServer);
             }
             return serviceResult;
         }

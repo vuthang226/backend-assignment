@@ -37,14 +37,14 @@ namespace Web.Service.System
                 });
                 if (!result.Succeeded)
                 {
-                    serviceResult.OnError(0, Resource.RoleInsertError);
+                    serviceResult.OnError(0, Resource.Resource.RoleInsertError);
                     return serviceResult;
                 }
-                serviceResult.OnSuccess(1, Resource.RoleInsertSuccess);
+                serviceResult.OnSuccess(1, Resource.Resource.RoleInsertSuccess);
                 return serviceResult;
             }
             
-            serviceResult.OnError(0,Resource.RoleExist);
+            serviceResult.OnError(0,Resource.Resource.RoleExist);
             return serviceResult;
         }
 

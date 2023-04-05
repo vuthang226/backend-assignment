@@ -14,6 +14,7 @@ using Web.Data.Entities.System;
 using Web.ViewModel.Common;
 using Web.ViewModel.System;
 
+
 namespace Web.Service.System
 {
     public class UserService: IUserService
@@ -43,17 +44,17 @@ namespace Web.Service.System
             ServiceResult serviceResult = new ServiceResult();
             if(request.Password != request.ConfirmPassword)
             {
-                serviceResult.OnError(0, Resource.UserInsertError);
+                serviceResult.OnError(0, Resource.Resource.ConfirmPasswordNotCorrect);
                 return serviceResult;
             }
             if(await _userManager.FindByNameAsync(request.UserName) != null)
             {
-                serviceResult.OnError(0, Resource.UserNameExist);
+                serviceResult.OnError(0, Resource.Resource.UserNameExist);
                 return serviceResult;
             }
             if(await _userManager.FindByEmailAsync(request.Email) != null)
             {
-                serviceResult.OnError(0, Resource.UserMailExist);
+                serviceResult.OnError(0, Resource.Resource.UserMailExist);
                 return serviceResult;
             }
             var user = new WebUser
@@ -66,11 +67,11 @@ namespace Web.Service.System
             var result = await _userManager.CreateAsync(user, request.Password);
             if (!result.Succeeded)
             {
-                serviceResult.OnError(0, Resource.UserInsertError);
+                serviceResult.OnError(0, Resource.Resource.UserInsertError);
                 return serviceResult;
             }
             await _userManager.AddToRoleAsync(user, "reader");
-            serviceResult.OnSuccess(1,Resource.UserInsertSuccess);
+            serviceResult.OnSuccess(1,Resource.Resource.UserInsertSuccess);
             return serviceResult;
 
 
@@ -86,7 +87,7 @@ namespace Web.Service.System
             var user = await _userManager.FindByNameAsync(request.UserName);
             if (user == null)
             {
-                serviceResult.OnError(0, Resource.UserNameNotFound);
+                serviceResult.OnError(0, Resource.Resource.UserNameNotFound);
                 return serviceResult;
             }
 
@@ -94,7 +95,7 @@ namespace Web.Service.System
 
             if (!result.Succeeded)
             {
-                serviceResult.OnError(0, Resource.LoginError);
+                serviceResult.OnError(0, Resource.Resource.LoginError);
                 return serviceResult;
             }
             var roles = await _userManager.GetRolesAsync(user);
@@ -126,7 +127,7 @@ namespace Web.Service.System
                 jwtToken,
                 userVm
                 
-            }, Resource.LoginSuccess);
+            }, Resource.Resource.LoginSuccess);
             return serviceResult;
         }
         /// <summary>
@@ -139,22 +140,22 @@ namespace Web.Service.System
             ServiceResult serviceResult = new ServiceResult();
             if(currentUser == idUser)
             {
-                serviceResult.OnError(0, Resource.UserDeleteError);
+                serviceResult.OnError(0, Resource.Resource.UserDeleteError);
                 return serviceResult;
             }
             var user = await _userManager.FindByIdAsync(idUser.ToString());
             if(user == null)
             {
-                serviceResult.OnError(0, Resource.UserNotFound);
+                serviceResult.OnError(0, Resource.Resource.UserNotFound);
                 return serviceResult;
             }
             var result = await _userManager.DeleteAsync(user);
             if (!result.Succeeded)
             {
-                serviceResult.OnError(0, Resource.UserDeleteError);
+                serviceResult.OnError(0, Resource.Resource.UserDeleteError);
                 return serviceResult;
             }
-            serviceResult.OnSuccess(1, Resource.UserDeleteSuccess);
+            serviceResult.OnSuccess(1, Resource.Resource.UserDeleteSuccess);
             return serviceResult;
         }
         /// <summary>
@@ -167,7 +168,7 @@ namespace Web.Service.System
             ServiceResult serviceResult = new ServiceResult();
             var user = await _userManager.FindByIdAsync(idUser.ToString());
             if(user == null) {
-                serviceResult.OnError(0, Resource.UserNotFound);
+                serviceResult.OnError(0, Resource.Resource.UserNotFound);
                 return serviceResult;
             }
             //Check is admin
@@ -193,13 +194,13 @@ namespace Web.Service.System
             var user = await _userManager.FindByIdAsync(idUser.ToString());
             if (user == null)
             {
-                serviceResult.OnError(0, Resource.UserNotFound);
+                serviceResult.OnError(0, Resource.Resource.UserNotFound);
                 return serviceResult;
             }
             //Check mail exist
             if (await _userManager.Users.AnyAsync(x => x.Email == userInfo.Email && x.Id != idUser))
             {
-                serviceResult.OnError(0, Resource.UserMailExist);
+                serviceResult.OnError(0, Resource.Resource.UserMailExist);
                 return serviceResult;
             }
             //Update data
@@ -210,10 +211,10 @@ namespace Web.Service.System
             var result = await _userManager.UpdateAsync(user);
             if (!result.Succeeded)
             {
-                serviceResult.OnError(0, Resource.UserUpdateError);
+                serviceResult.OnError(0, Resource.Resource.UserUpdateError);
                 return serviceResult;
             }
-            serviceResult.OnSuccess(1, Resource.UserUpdateSuccess);
+            serviceResult.OnSuccess(1, Resource.Resource.UserUpdateSuccess);
 
             return serviceResult;
         }
@@ -272,14 +273,14 @@ namespace Web.Service.System
             ServiceResult serviceResult = new ServiceResult();
             if (currentId == request.UserId)
             {
-                serviceResult.OnError(0, Resource.UserNotAssignItSelf);
+                serviceResult.OnError(0, Resource.Resource.UserNotAssignItSelf);
                 return serviceResult;
             }
             var user = await _userManager.FindByIdAsync(request.UserId.ToString());
             
             if (user == null)
             {
-                serviceResult.OnError(0, Resource.UserNameNotFound);
+                serviceResult.OnError(0, Resource.Resource.UserNameNotFound);
                 return serviceResult;
             }
             if (await _userManager.IsInRoleAsync(user, request.RoleName) == false)
@@ -291,7 +292,7 @@ namespace Web.Service.System
                 await _userManager.AddToRoleAsync(user, request.RoleName);
             }
             //await _userManager.UpdateAsync(user);
-            serviceResult.OnSuccess(1, Resource.AssignAdmin);
+            serviceResult.OnSuccess(1, Resource.Resource.AssignAdmin);
             return serviceResult;
 
             

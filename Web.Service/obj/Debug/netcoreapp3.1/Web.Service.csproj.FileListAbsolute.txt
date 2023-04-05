@@ -6,7 +6,6 @@ D:\Công việc\Angular web\Backend\WebAngular\Web.Service\bin\Debug\netcoreapp3
 D:\Công việc\Angular web\Backend\WebAngular\Web.Service\bin\Debug\netcoreapp3.1\Web.Data.pdb
 D:\Công việc\Angular web\Backend\WebAngular\Web.Service\bin\Debug\netcoreapp3.1\Web.ViewModel.pdb
 D:\Công việc\Angular web\Backend\WebAngular\Web.Service\obj\Debug\netcoreapp3.1\Web.Service.csproj.AssemblyReference.cache
-D:\Công việc\Angular web\Backend\WebAngular\Web.Service\obj\Debug\netcoreapp3.1\Web.Service.Resource.resources
 D:\Công việc\Angular web\Backend\WebAngular\Web.Service\obj\Debug\netcoreapp3.1\Web.Service.csproj.GenerateResource.cache
 D:\Công việc\Angular web\Backend\WebAngular\Web.Service\obj\Debug\netcoreapp3.1\Web.Service.GeneratedMSBuildEditorConfig.editorconfig
 D:\Công việc\Angular web\Backend\WebAngular\Web.Service\obj\Debug\netcoreapp3.1\Web.Service.AssemblyInfoInputs.cache
@@ -14,3 +13,7 @@ D:\Công việc\Angular web\Backend\WebAngular\Web.Service\obj\Debug\netcoreapp3
 D:\Công việc\Angular web\Backend\WebAngular\Web.Service\obj\Debug\netcoreapp3.1\Web.Service.csproj.CoreCompileInputs.cache
 D:\Công việc\Angular web\Backend\WebAngular\Web.Service\obj\Debug\netcoreapp3.1\Web.Service.dll
 D:\Công việc\Angular web\Backend\WebAngular\Web.Service\obj\Debug\netcoreapp3.1\Web.Service.pdb
+D:\Công việc\Angular web\Backend\WebAngular\Web.Service\obj\Debug\netcoreapp3.1\Web.Service.Resource.Resource.resources
+D:\Công việc\Angular web\Backend\WebAngular\Web.Service\obj\Debug\netcoreapp3.1\Web.Service.Resource.Resource.en.resources
+D:\Công việc\Angular web\Backend\WebAngular\Web.Service\bin\Debug\netcoreapp3.1\en\Web.Service.resources.dll
+D:\Công việc\Angular web\Backend\WebAngular\Web.Service\obj\Debug\netcoreapp3.1\en\Web.Service.resources.dll
